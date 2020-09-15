@@ -1,2 +1,2 @@
 ipython==7.9.0
-Pillow==7.0.0
+Pillow>=7.1.0
