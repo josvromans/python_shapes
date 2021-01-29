@@ -41,8 +41,9 @@ Run the following command to generate image(s):
 ```
 python draw.py
 ```
-By default it will draw a Sierpinksy triangle by the rules of a Chaos Game.
-If you don't want to draw this triangle, you have to go to `/shapes/chaos_game.py` and uncomment `line 40`.
+By default it will draw a basic Triangle Subdivision. You should get exactly this image, generated in the /files folder:
+![Scheme](triangle_subdivide_i15_021.jpeg)
+If you don't want to draw this, you have to go to `/shapes/triangle_subdivision.py` and uncomment `line 72`.
 
 Other examples are in `/shapes/example.py`. You can make two example movies by uncommenting the function calls in this file, and then run the draw command again:
 ```

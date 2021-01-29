@@ -37,4 +37,4 @@ def draw_chaos_game(image_width=1080, image_height=1080, polygon_points=None, it
     return new_image_path
 
 
-draw_chaos_game(image_width=int(1080 * 1.5), image_height=1080, iterations=5 * 10 ** 5)
+# draw_chaos_game(image_width=int(1080 * 1.5), image_height=1080, iterations=5 * 10 ** 5)
