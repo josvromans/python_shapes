@@ -47,13 +47,14 @@ def subdivide_triangle(
     for triangle in previous_generation_triangles:
         draw.polygon(xy=triangle, outline=line_color)
 
-    save_image(image=image, file_name='Subdivide_i{}_{}'.format(iterations, strategy), resize_size=resize_size)
+    save_image(image=image, file_name='Subdivide_i{}_{}'.format(iterations, ''.join(str(i) for i in strategy)),
+               resize_size=resize_size)
 
 
 def recursively_subdivide_triangle(strategy, total_iterations=8, width=1080, height=1080, resize_size=None):
     """
-    Generates the same output as the methods above, but all the logic compressed to a few lines,
-    and it seems to be slightly faster.
+    Generates the same output as the methods above (but the colors are set by the default settings),
+    but all the logic compressed to a few lines, and it seems to be slightly faster.
     """
     def subdivide_and_draw(draw, vertices, i):
         if i < total_iterations:
@@ -66,7 +67,8 @@ def recursively_subdivide_triangle(strategy, total_iterations=8, width=1080, hei
 
     image, draw = new_image(size=(width, height))
     subdivide_and_draw(draw=draw, vertices=[(width / 2, 0), (0, height), (width, height)], i=0)
-    save_image(image=image, file_name='Subdivide_i{}_{}'.format(total_iterations, strategy), resize_size=resize_size)
+    save_image(image=image, file_name='Subdivide_i{}_{}'.format(total_iterations, ''.join(str(i) for i in strategy)),
+               resize_size=resize_size)
 
 
 subdivide_triangle(strategy=[0, 2, 1], iterations=15, width=1080 * 3, height=1080 * 3, resize_size=(1080, 1080))
